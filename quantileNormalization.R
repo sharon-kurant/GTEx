@@ -1,7 +1,8 @@
 if (!require("BiocManager", quietly = TRUE)){
   install.packages("BiocManager")
+  BiocManager::install("preprocessCore")
 }
-BiocManager::install("preprocessCore")
+
 library(preprocessCore)
 
 #rows are genes, columns are samples

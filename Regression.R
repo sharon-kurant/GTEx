@@ -10,6 +10,8 @@ for (s in colnames(qn.colon.t)[1:(length(colnames(qn.colon.t))-1)]){
   qn.colon.t[s]=lelm$residuals
 }
 
+drop <- c("SMRIN","AGE")
+qn.colon.t = qn.colon.t[,!(names(qn.colon.t) %in% drop)]
 qn.colon.res=t(qn.colon.t)
 
 # Regression Brain
@@ -23,4 +25,6 @@ for (s in colnames(qn.brain.t)[1:(length(colnames(qn.brain.t))-1)]){
   qn.brain.t[s]=lelm$residuals
 }
 
+drop <- c("SMRIN","AGE")
+qn.brain.t = qn.brain.t[,!(names(qn.brain.t) %in% drop)]
 qn.brain.res=t(qn.brain.t)
